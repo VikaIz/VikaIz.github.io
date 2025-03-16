@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница с фреймами</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+      }
+      iframe {
+        border: none;
+      }
+      .menu {
+        width: 200px;
+        height: 100vh;
+        background-color: #f0f0f0; /* Светлый фон для меню */
+        border-right: 2px solid #ccc; /* Граница справа для отделения */
+      }
+      .content {
+        width: 800px;
+        height: 100vh;
+        background-color: #ffffff; /* Белый фон для контента */
+      }
+    </style>
+  </head>
+  <body>
+    <iframe class="menu" src="iframes/menu.html" name="menu"></iframe>
+    <iframe class="content" src="iframes/content.html" name="content"></iframe>
+  </body>
+</html>
