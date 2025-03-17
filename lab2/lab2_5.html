@@ -7,13 +7,16 @@
 
   <body>
     <h1>Форма регистрации пользователя</h1>
-    <form action="#" method="post">
+    <form method="post">
       <table>
         <tr>
-          <td>E-mail</td>
+          <td>
+            <label for="email">E-mail</label>
+          </td>
           <td>
             <input
               type="email"
+              id="email"
               name="email"
               placeholder="Введите e-mail"
               required
@@ -21,10 +24,13 @@
           </td>
         </tr>
         <tr>
-          <td>Пароль</td>
+          <td>
+            <label for="password">Пароль</label>
+          </td>
           <td>
             <input
               type="password"
+              id="password"
               name="password"
               placeholder="Введите пароль"
               required
@@ -32,7 +38,9 @@
           </td>
         </tr>
         <tr>
-          <td>Пол</td>
+          <td>
+            <label>Пол</label>
+          </td>
           <td>
             <input type="radio" name="gender" id="male" value="male" />
             <label for="male">Мужчина</label>
@@ -41,9 +49,11 @@
           </td>
         </tr>
         <tr>
-          <td>Год рождения</td>
           <td>
-            <select name="birth_year">
+            <label for="birth_year">Год рождения</label>
+          </td>
+          <td>
+            <select name="birth_year" id="birth_year">
               <option value="1981">1981</option>
               <option value="1982">1982</option>
               <option value="1983">1983</option>
@@ -77,41 +87,40 @@
           </td>
         </tr>
         <tr>
-          <td>Я знаю</td>
           <td>
-            <label
-              ><input
-                type="checkbox"
-                name="lang"
-                value="rus"
-                checked
-                disabled
-              />
-              Русский</label
+            <label>Я знаю</label>
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" name="lang" value="rus" checked disabled />
+              Русский </label
             ><br />
-            <label
-              ><input type="checkbox" name="lang" value="spanish" />
-              Испанский</label
+            <label>
+              <input type="checkbox" name="lang" value="spanish" />
+              Испанский </label
             ><br />
-            <label
-              ><input type="checkbox" name="lang" value="german" />
-              Немецкий</label
+            <label>
+              <input type="checkbox" name="lang" value="german" />
+              Немецкий </label
             ><br />
-            <label
-              ><input type="checkbox" name="lang" value="eng" />
-              Английский</label
+            <label>
+              <input type="checkbox" name="lang" value="eng" />
+              Английский </label
             ><br />
-            <label
-              ><input type="checkbox" name="lang" value="chinese" />
-              Китайский</label
-            >
+            <label>
+              <input type="checkbox" name="lang" value="chinese" />
+              Китайский
+            </label>
           </td>
         </tr>
         <tr>
-          <td>Обо мне</td>
+          <td>
+            <label for="about">Обо мне</label>
+          </td>
           <td>
             <textarea
               name="about"
+              id="about"
               rows="6"
               cols="30"
               placeholder="Напишите коротко о себе"
