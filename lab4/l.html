@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Оформление вертикального меню</title>
+    <style>
+      html {
+        background: #f0f0f0;
+      }
+
+      .menu {
+        width: 200px;
+        height: auto; /* Adjust height to fit content */
+        background: #fff;
+        padding-top: 5px;
+      }
+
+      .menu ul {
+        list-style-type: none; /* Remove bullet points */
+        padding-left: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+      }
+
+      .menu li {
+        cursor: pointer; /* Change cursor to pointer for clickable items */
+        padding: 8px 0; /* Add padding for list items */
+      }
+
+      .menu li a {
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Center items vertically */
+        color: #369;
+        text-decoration: none; /* Remove underline */
+      }
+
+      .menu li a:hover {
+        color: #6092c4; /* Change color on hover */
+      }
+
+      .menu li ul {
+        display: none; /* Hide submenus by default */
+        padding-left: 15px; /* Indent sub-items */
+      }
+
+      .menu li img {
+        width: 16px; /* Set width for images */
+        height: 16px; /* Set height for images */
+        margin-right: 5px; /* Space between image and text */
+        vertical-align: middle; /* Align image with text */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="#" class="toggle">
+            <img src="pic/minus.gif" alt="Toggle" />Фильмы
+          </a>
+          <ul class="content">
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Экшн</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Мелодрамы</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Сериалы</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Семейные</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="toggle">
+            <img src="pic/minus.gif" alt="Toggle" />Музыка
+          </a>
+          <ul class="content">
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Классика</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Джаз</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Рок</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Грандж</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="toggle">
+            <img src="pic/minus.gif" alt="Toggle" />Софт
+          </a>
+          <ul class="content">
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Графика</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="pic/point.gif" alt="Point" />3D-моделирование</a
+              >
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Машинопись</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Переводчики</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="toggle">
+            <img src="pic/minus.gif" alt="Toggle" />Игры
+          </a>
+          <ul class="content">
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />РПГ</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Шутеры</a>
+            </li>
+            <li>
+              <a href="#"><img src="pic/point.gif" alt="Point" />Пасьянсы</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      // JavaScript to handle the collapsible functionality and icon change
+      const toggles = document.querySelectorAll(".toggle");
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default anchor behavior
+          const content = this.nextElementSibling;
+          const icon = this.querySelector("img");
+
+          if (content.style.display === "block") {
+            content.style.display = "none";
+            icon.src = "pic/minus.gif"; // Show minus icon when closed
+          } else {
+            content.style.display = "block";
+            icon.src = "pic/plus.gif"; // Show plus icon when open
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

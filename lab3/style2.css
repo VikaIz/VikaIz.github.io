@@ -1,0 +1,33 @@
+body {
+  background-image: url("pattern-thin-fir-trees.png");
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: right;
+}
+h1,
+h2,
+h3 {
+  color: rgb(171, 88, 192);
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+}
+em {
+  color: rgb(95, 49, 139);
+  font-style: italic;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+strong {
+  font-family: "Caveat", cursive;
+}
+article {
+  border: 10px solid #eef4f7;
+  border-radius: 50px;
+  margin: 20px;
+  padding: 30px;
+  background-color: #eef4f7;
+}
