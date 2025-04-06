@@ -8,36 +8,37 @@
     <style>
       .container {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-content: flex-start;
-        flex-flow: nowrap row;
+        padding: 10px;
+        /* flex-flow: nowrap row; */
       }
 
       #left,
       #right,
       #center {
-        flex: 0 auto;
+        padding: 10px;
         box-sizing: border-box;
-        margin: 0 10px;
       }
 
       #left {
         background: #ccf;
-        width: 300px;
+        width: 200px;
 
         order: 1;
       }
 
       #right {
         background: #fcc;
-        width: 300px;
+        width: 200px;
 
         order: 3;
       }
 
       #center {
         background: #cfc;
-        /* width: 600px; */
+        flex-grow: 1;
+        margin: 0 10px;
 
         order: 2;
       }
